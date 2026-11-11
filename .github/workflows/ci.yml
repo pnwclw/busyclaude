@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      # Builds the package, then runs the hook against it on a stand-in bar.
+      - run: npm test
+
+      # The package that was just built and tested, to install with `setup --package`.
+      - uses: actions/upload-artifact@v7
+        with:
+          name: app-package
+          path: dist/*.tgz
+          if-no-files-found: error

@@ -1,0 +1,18 @@
+{
+  "name": "busyclaude",
+  "version": "0.1.0",
+  "description": "Claude Code on a BUSY Bar: allow or deny permission prompts with the bar's buttons, answer questions with its wheel, and see when a turn is done.",
+  "author": {
+    "name": "Wacław Kozłowski",
+    "url": "https://github.com/pnwclw"
+  },
+  "homepage": "https://github.com/pnwclw/busyclaude",
+  "repository": "https://github.com/pnwclw/busyclaude",
+  "license": "MIT",
+  "keywords": [
+    "busy-bar",
+    "notifications",
+    "permissions",
+    "hooks"
+  ]
+}

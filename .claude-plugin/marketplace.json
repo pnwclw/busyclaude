@@ -1,0 +1,15 @@
+{
+  "name": "busyclaude",
+  "description": "Claude Code on a BUSY Bar",
+  "owner": {
+    "name": "Wacław Kozłowski",
+    "url": "https://github.com/pnwclw"
+  },
+  "plugins": [
+    {
+      "name": "busyclaude",
+      "source": "./",
+      "description": "Allow or deny Claude Code's permission prompts with the bar's buttons, answer its questions with the wheel, and see when a turn is done."
+    }
+  ]
+}

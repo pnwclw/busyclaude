@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "version": 3,
+  "fields": {
+    "sound": {
+      "label": "Sound",
+      "description": "Play a tone with each notification.",
+      "type": "boolean",
+      "default": true
+    },
+    "led": {
+      "label": "Blink LED",
+      "description": "Blink the status LED in the notification's colour.",
+      "type": "boolean",
+      "default": true
+    },
+    "usage": {
+      "label": "Show usage",
+      "description": "After a finished turn, show how much of the 5-hour and weekly limits is used.",
+      "type": "boolean",
+      "default": true
+    },
+    "wait": {
+      "label": "Answer time",
+      "description": "How long a permission prompt waits for a button. A question waits at least 30 seconds. The long times hold up the session until you answer or it runs out.",
+      "type": "enum",
+      "default": "60",
+      "options": [
+        { "value": "15", "label": "15 s" },
+        { "value": "30", "label": "30 s" },
+        { "value": "60", "label": "60 s" },
+        { "value": "300", "label": "5 min" },
+        { "value": "600", "label": "10 min" }
+      ]
+    }
+  }
+}
